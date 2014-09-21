@@ -1,4 +1,4 @@
-﻿initScope_module = angular.module 'classy-initScope', ['classy-core']
+initScope_module = angular.module 'classy-initScope', ['classy-core']
 
 initScope_module.classy.plugin.controller
 	name: 'initScope'
@@ -9,6 +9,8 @@ initScope_module.classy.plugin.controller
 	init: (klass, deps, module) ->
 		# Adds controller functions (unless they have a `_` prefix) to the `$scope`
 		if @options.enabled and klass.constructor::initScope
-		    for key, value of klass.constructor::initScope.call klass
+		    data = klass.constructor::initScope
+		    data = data.call klass if typeof data is 'function' 
+		    for key, value of data
 		        deps.$scope[key] = value
 		return
