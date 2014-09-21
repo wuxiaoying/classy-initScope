@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Init scope plugin for Angular Classy</title>
+</head>
+<body>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-classy/angular-classy.js"></script>
+  <script src="../classy-initScope.js"></script>
+
+  <script src="app.js"></script>
+  
+  <div ng-controller="MainController">
+    <input type="text" ng-model="message" />
+    <button type="button" ng-click="broadcastMessage(message)">Broadcast</button>
+  </div>
+  <br />
+  <div ng-controller="ClassyController">
+    <span>Recieved message: </span>
+    <span ng-bind="message"></span>
+  </div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-classy-initScope
-================
+classy-on
+=========
 
-Initialize scope plugin for Angular Classy
+On event plugin for Angular Classy 
