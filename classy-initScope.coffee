@@ -7,7 +7,7 @@ initScope_module.classy.plugin.controller
 		enabled: true
 		
 	init: (klass, deps, module) ->
-		# Adds controller functions (unless they have a `_` prefix) to the `$scope`
+		# Adds objects returned by or set by initScope to the `$scope`
 		if @options.enabled and klass.constructor::initScope
 		    data = klass.constructor::initScope
 		    data = data.call klass if typeof data is 'function' 
