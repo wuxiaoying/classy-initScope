@@ -63,8 +63,8 @@ app.classy.controller({
 	initScope: function () {
 	    var cowName = "bessie";
 	    return {
-		cow: cowName
-            };
+	       cow: cowName
+	    };
 	}
 });
 ```
