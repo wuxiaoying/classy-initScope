@@ -38,6 +38,8 @@ npm test
 
 ### Simple initScope property
 
+This makes $scope.cow to initialize as "bessie"
+
 ```javascript
 app.classy.controller({
 	
@@ -51,6 +53,8 @@ app.classy.controller({
 
 ### initScope property with function 
 
+This is useful if you want to use services or do other initial work while setting the initial scope variables. 
+
 ```javascript
 app.classy.controller({
 	
@@ -59,8 +63,8 @@ app.classy.controller({
 	initScope: function () {
 	    var cowName = "bessie";
 	    return {
-		     cow: cowName
-		  };
+		cow: cowName
+            };
 	}
 });
 ```
