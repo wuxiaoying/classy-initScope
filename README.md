@@ -36,6 +36,8 @@ bower install
 npm test
 ```
 
+## Usage Examples
+
 ### Simple initScope property
 
 This makes $scope.cow to initialize as "bessie"
