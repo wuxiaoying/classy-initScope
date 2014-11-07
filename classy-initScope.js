@@ -2,7 +2,7 @@
 (function() {
   var initScope_module;
 
-  initScope_module = angular.module('classy-initScope', ['classy-core']);
+  initScope_module = angular.module('classy-initScope', ['classy.core']);
 
   initScope_module.classy.plugin.controller({
     name: 'initScope',
